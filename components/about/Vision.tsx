@@ -23,7 +23,7 @@ const PILLARS = [
 ];
 
 // ─── Three.js for Vision section ─────────────────────────────────
-function useVisionThree(mountRef: React.RefObject<HTMLDivElement>) {
+function useVisionThree(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;

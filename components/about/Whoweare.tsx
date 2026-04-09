@@ -29,7 +29,7 @@ const DISTINCTIONS = [
 /* ─────────────────────────────────────────
    SECTION 1 THREE.JS — GROWTH HELIX ORBS
 ───────────────────────────────────────── */
-function useScene1(canvasRef: React.RefObject<HTMLCanvasElement>) {
+function useScene1(canvasRef: React.RefObject<HTMLCanvasElement | null>) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -166,7 +166,7 @@ function useScene1(canvasRef: React.RefObject<HTMLCanvasElement>) {
 /* ─────────────────────────────────────────
    SECTION 2 THREE.JS — DARK PARTICLE SPHERE
 ───────────────────────────────────────── */
-function useDarkScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
+function useDarkScene(canvasRef: React.RefObject<HTMLCanvasElement | null>) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -175,7 +175,8 @@ function useDarkScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
     const scene = new THREE.Scene();
     const cam = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
     const resize = () => {
-      const p = canvas.parentElement!;
+      const p = canvas.parentElement;
+if (!p) return;
       renderer.setSize(p.clientWidth, p.clientHeight, false);
       renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
       cam.aspect = p.clientWidth / p.clientHeight;
@@ -207,7 +208,7 @@ function useDarkScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
 /* ─────────────────────────────────────────
    SECTION 3 THREE.JS — WAVE GRID
 ───────────────────────────────────────── */
-function useWaveScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
+function useWaveScene(canvasRef: React.RefObject<HTMLCanvasElement | null>) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -216,7 +217,8 @@ function useWaveScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
     const scene = new THREE.Scene();
     const cam = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
     const resize = () => {
-      const p = canvas.parentElement!;
+      const p = canvas.parentElement;
+if (!p) return;
       renderer.setSize(p.clientWidth, p.clientHeight, false);
       renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
       cam.aspect = p.clientWidth / p.clientHeight;
@@ -243,7 +245,7 @@ function useWaveScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
 /* ─────────────────────────────────────────
    SECTION 4 THREE.JS — FLOATING SHAPES
 ───────────────────────────────────────── */
-function useFloatingScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
+function useFloatingScene(canvasRef: React.RefObject<HTMLCanvasElement | null>) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -252,7 +254,8 @@ function useFloatingScene(canvasRef: React.RefObject<HTMLCanvasElement>) {
     const scene = new THREE.Scene();
     const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
     const resize = () => {
-      const p = canvas.parentElement!;
+      const p = canvas.parentElement;
+if (!p) return;
       renderer.setSize(p.clientWidth, p.clientHeight, false);
       renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
       cam.aspect = p.clientWidth / p.clientHeight;
