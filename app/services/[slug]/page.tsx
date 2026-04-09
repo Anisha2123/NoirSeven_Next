@@ -8,7 +8,7 @@ import * as THREE from "three";
 import { SERVICES } from "@/components/services/Services";
 
 // ─── Three.js Background for detail page ─────────────────────────
-function useDetailThree(mountRef: React.RefObject<HTMLDivElement>) {
+function useDetailThree(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;

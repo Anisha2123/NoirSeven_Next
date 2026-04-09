@@ -8,7 +8,7 @@ import AboutUs from "@/components/about/Aboutus";
 export default function Page() {
   return (
     <main>
-        <AboutUs />
+      <AboutUs />
       <MeetTheLeader />
       <WhoWeAre />
       <VisionMissionFounder />
