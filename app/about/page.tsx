@@ -1,5 +1,5 @@
 import WhoWeAre from "@/components/about/Whoweare";
-import MeetTheLeader from "../AboutUs/page";
+import MeetTheLeader from "@/components/about/MeettheLeader";
 import VisionMissionFounder from "@/components/about/Vision";
 import AboutUs from "@/components/about/Aboutus";
 
