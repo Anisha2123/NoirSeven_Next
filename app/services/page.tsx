@@ -7,7 +7,7 @@ import * as THREE from "three";
 import { SERVICES } from "@/components/services/Services";
 
 // ─── Three.js Background ──────────────────────────────────────────
-function useServicesThree(mountRef: React.RefObject<HTMLDivElement>) {
+function useServicesThree(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;
