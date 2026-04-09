@@ -33,7 +33,7 @@ const DIFF = [
 ];
 
 // ─── Three.js scene ───────────────────────────────────────────────
-function useAboutThree(mountRef: React.RefObject<HTMLDivElement>) {
+function useSomething(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;
@@ -330,7 +330,7 @@ export default function AboutUs() {
   const [mounted, setMounted] = useState(false);
   const [mouseXY, setMouseXY] = useState({ x: 0, y: 0 });
 
-  useAboutThree(mountRef);
+  useSomething(mountRef);
 
   useEffect(() => {
     setMounted(true);
