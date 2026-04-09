@@ -102,7 +102,7 @@ const TEAM = [
 ];
 
 // ─── Three.js Background ──────────────────────────────────────────
-function useTeamThree(mountRef: React.RefObject<HTMLDivElement>) {
+function useTeamThree(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;

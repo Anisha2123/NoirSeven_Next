@@ -48,7 +48,7 @@ const C = {
 };
 
 // ─── Three.js Scene ───────────────────────────────────────────────────────────
-function useThreeScene(mountRef: React.RefObject<HTMLDivElement>) {
+function useThreeScene(mountRef: React.RefObject<HTMLDivElement | null>) {
   useEffect(() => {
     const mount = mountRef.current;
     if (!mount) return;
